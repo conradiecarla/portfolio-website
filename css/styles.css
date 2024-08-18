@@ -7,5 +7,37 @@ Background (White): #FFFFFF
 
 
 body {
-    background-color: lightgray;
+    background-color: #FFFFFF;
+    font-family:'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #00003B
+
+
+h1, h2, h3 {
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 70px;
+    font-weight:500;
+    color: #FD4C2A
+}
+
+h2{
+    font-size: 50px;
+    font-weight:300
+    color: #FD4C2A
+}
+
+h3{
+    font-size: 30px;
+    font-weight:400
+}
+
+p{
+    font-size: 20px;
+    font-weight:200
+}
 }
