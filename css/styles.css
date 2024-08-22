@@ -9,42 +9,54 @@ body {
   background-color: #fff;
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.6;
   font-weight: 400;
   color: #00003b;
+}
+
+header {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  .css-box-shadow {
+    width: [object Object]px;
+    height: [object Object]px;
+    background: #f8f8f8;
+    border: solid #bdbdbd 1px;
+    box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
+  }
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 65px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fd4c2a;
 }
 
 h2 {
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 400;
   color: #fd4c2a;
 }
 
 h3 {
   font-size: 30px;
   font-weight: 400;
-}
-
-h4 {
-  font-size: 20px;
-  font-weight: 400;
+  color: #00003b;
 }
 
 p {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
+  color: #00003b;
 }
 
 img {
@@ -68,43 +80,115 @@ a:focus {
 
 a:active {
   color: #00003b;
-  font-weight: underline;
+  text-decoration: none;
 }
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
+  background-color: #00003b;
   color: #fff; /* needed to override the default link color */
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 25px;
   border-radius: 3px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
   transition: 0.2s opacity;
 }
 
 .button:hover,
-button:focus {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+.button:focus {
   text-decoration: none;
-}
-
-.button:active {
-  border-top: 2px solid #994c30;
+  background-color: #fff;
+  color: #00003b; /* needed to override the default link color */
+  border: 2px solid #00003b;
+  font-weight: 400;
+  padding: 10px 25px;
+  border-radius: 3px;
 }
 
 .button.contact {
   background-color: transparent;
-  color: #ff7f50;
-  text-transform: uppercase;
-  border: 2px solid #ff7f50;
+  color: #fd4c2a;
+  border: 2px solid #fd4c2a;
 }
 
 .button.contact:hover,
 .button.contact:focus {
-  background-color: #ff7f50;
+  background-color: #fd4c2a;
   color: #fff;
 }
 
-.button.contact:active {
-  border-top: 2px solid #994c30;
+.button.project {
+  background-color: #fd4c2a;
+  color: #fff;
+  border: 2px solid #fd4c2a;
+}
+
+.button.project:hover,
+.button.project:focus {
+  background-color: #fff;
+  color: #fd4c2a;
+}
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 50px 0;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+#work .row {
+  margin: 50px 0;
+  padding-bottom: 75px;
+  border-bottom: 1px solid #00003b;
+}
+
+#hero {
+  background-color: #fff;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero h1 {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+nav > ul > li > a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+nav > ul > li > a:active {
+  color: #00003b;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
 }
