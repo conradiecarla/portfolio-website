@@ -1,61 +1,110 @@
-/* 
+/*
 Colours used:
 Primary (Red):#FD4C2A
 Secondary (Blue):#00003B
 Background (White): #FFFFFF
 */
 
-
 body {
-    background-color: #FFFFFF;
-    font-family:'DM Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
-    font-weight: 400;
-    color: #00003B
+  background-color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #00003b;
 }
 
-h1, h2, h3 {
-    line-height: 1.6;
+h1,
+h2,
+h3 {
+  line-height: 1.6;
 }
 
-h1{
-    font-size: 65px;
-    font-weight:500;
-    color: #FD4C2A
+h1 {
+  font-size: 65px;
+  font-weight: 500;
+  color: #fd4c2a;
 }
 
-h2{
-    font-size: 50px;
-    font-weight:300;
-    color: #FD4C2A;
-}
-h3{
-    font-size: 30px;
-    font-weight:400;
+h2 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #fd4c2a;
 }
 
-p{
-    font-size: 20px;
-    font-weight:200;
-    }
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 200;
+}
 
 img {
-    width: 100%
-    }
+  width: 100%;
+}
 
 a {
-     color: #FD4C2A;
-        text-decoration: none; 
+  color: #fd4c2a;
+  text-decoration: none;
 }
-a:visited { 
-    color: #FD4C2A;
-  }
-a:hover,a:focus {
-     color: #FD4C2A;
-    text-decoration: underline; 
+
+a:visited {
+  color: #fd4c2a;
 }
-a:active { 
-    color: #00003B;
-    font-weight: underline;
+
+a:hover,
+a:focus {
+  color: #fd4c2a;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #00003b;
+  font-weight: underline;
+}
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #ff7f50;
+  color: #fff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button:hover,
+button:focus {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button:active {
+  border-top: 2px solid #994c30;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #ff7f50;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+
+.button.contact:hover,
+.button.contact:focus {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+.button.contact:active {
+  border-top: 2px solid #994c30;
 }
