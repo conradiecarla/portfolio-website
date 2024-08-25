@@ -3,7 +3,8 @@ Colours used:
 Primary (Red):#FD4C2A
 Secondary (Blue):#00003B
 Background (White): #FFFFFF
-*/
+
+Start with basic tags (html, body, a, h1, img) */
 
 body {
   background-color: #fff;
@@ -12,21 +13,6 @@ body {
   line-height: 1.6;
   font-weight: 400;
   color: #00003b;
-}
-
-header {
-  background-color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  .css-box-shadow {
-    width: [object Object]px;
-    height: [object Object]px;
-    background: #f8f8f8;
-    border: solid #bdbdbd 1px;
-    box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
-  }
 }
 
 h1,
@@ -51,6 +37,7 @@ h3 {
   font-size: 30px;
   font-weight: 400;
   color: #00003b;
+  margin: 0;
 }
 
 p {
@@ -63,14 +50,20 @@ img {
   width: 100%;
 }
 
+span {
+  display: block;
+}
+
 a {
   color: #fd4c2a;
   text-decoration: none;
 }
 
-a:visited {
+li::marker {
   color: #fd4c2a;
 }
+
+/* Then go into basic styling (links, buttons, forms) */
 
 a:hover,
 a:focus {
@@ -89,8 +82,8 @@ a:active {
   color: #fff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px 25px;
-  border-radius: 3px;
-  transition: 0.2s opacity;
+  border-radius: 30px;
+  transition: opacity 0.2s;
 }
 
 .button:hover,
@@ -101,7 +94,7 @@ a:active {
   border: 2px solid #00003b;
   font-weight: 400;
   padding: 10px 25px;
-  border-radius: 3px;
+  opacity: 0.8;
 }
 
 .button.contact {
@@ -128,7 +121,34 @@ a:active {
   color: #fd4c2a;
 }
 
-/* Layout styling */
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation-duration: 25s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/* or can do it the faster way:
+.cloud-front {animation: 25s cloud-move infinite alternate linear;} */
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Then go into Layout styling (columns, rows) */
+
+* {
+  box-sizing: border-box;
+}
 
 .container {
   padding: 0 15px;
@@ -140,6 +160,25 @@ a:active {
 
 .logo {
   max-width: 250px;
+}
+
+.about picture {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Finally, go into specific sections and their elements (header, main, footer) */
+
+header {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
 }
 
 #work .row {
@@ -157,10 +196,6 @@ a:active {
 
 #hero h1 {
   text-align: center;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 nav > ul {
@@ -191,4 +226,89 @@ nav > ul > li > a:active {
 
 nav {
   display: inline-block;
+}
+
+@keyframes color-change {
+  0% { fill: #edc655; }
+  50% { fill: #fcffad; }
+  100% { fill: #f76414; }
+}
+
+@keyframes cloud-move {
+  from { transform: translate(0, 50px); }
+  to { transform: translate(200px, 50px); }
+}
+
+@keyframes cloud-move-reverse {
+  from { transform: translate(446px, 48px); }
+  to { transform: translate(100px, 48px); }
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  /* this pseudo element fixes the flow of the page without affecting the rows themselves */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+
+@media only screen and (min-width: 1024px) {
+  p,
+  li {
+    font-size: 20px;
+  }
+
+  .col-lg-7 {
+    width: 60%;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+
+@media only screen and (min-width: 1440px) {
 }
