@@ -10,18 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32a086449d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="container" position="relative">
+            <div class="navtoggle" id="myNavtoggle"></div>
             <img class="logo" src="https://via.placeholder.com/150x50?text=Logo" alt="Image Coming Soon">
-            <p><a href="file:///Users/carlaconradie/Desktop/portfolio-carlaconradie/index.html">Carla Conradie</a></p>
+            <a href="file:///Users/carlaconradie/Desktop/portfolio-carlaconradie/index.html">Carla Conradie</a>
             <nav>
                 <ul class="navigation">
                     <li><a href="index.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="javascript:void(0);" class="icon" on click="menuToggle()"><i class="fas fa-bars"></i></a></li>
                 </ul> 
             </nav>
         </div>
@@ -656,6 +659,10 @@
         </div>
     </footer>
 </main>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 </body>
 

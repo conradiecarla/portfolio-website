@@ -159,7 +159,7 @@ a:active {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 .about picture {
@@ -172,9 +172,12 @@ a:active {
 
 header {
   background-color: #fff;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding-top: 25px;
 }
 
 footer {
@@ -201,10 +204,7 @@ footer {
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
@@ -224,8 +224,35 @@ nav > ul > li > a:active {
   text-decoration: none;
 }
 
-nav {
-  display: inline-block;
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 
 @keyframes color-change {
@@ -278,6 +305,22 @@ Medium devices (640px and larger)
     content: "";
     clear: both;
     display: table;
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  nav > ul {
+    margin: 1em 0;
   }
 }
 
