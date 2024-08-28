@@ -315,12 +315,17 @@ Medium devices (640px and larger)
     display: inline-block;
   }
 
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
-
   nav > ul {
     margin: 1em 0;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .navtoggle.responsive li {
+    padding: 0px 0;
+    border-top: 0px solid rgb(79, 122, 165);
   }
 }
 
