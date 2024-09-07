@@ -261,7 +261,7 @@ nav > ul > li > a:active {
   padding: 24px 0 0;
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
@@ -331,15 +331,15 @@ Medium devices (640px and larger)
 
   .navtoggle li:not(:last-child) {
     display: inline-block;
-}
+  }
 
   .navtoggle li:last-child {
     display: none;
   }
 
   .navtoggle.responsive li {
-    padding: 0px 0;
-    border-top: 0px solid rgb(79, 122, 165);
+    padding: 0;
+    border-top: 0 solid rgb(79, 122, 165);
   }
 }
 
