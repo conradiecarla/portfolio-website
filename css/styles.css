@@ -51,7 +51,7 @@ img {
 }
 
 span {
-  display: block;
+  color: #fd4c2a;
 }
 
 a {
@@ -68,7 +68,7 @@ li::marker {
 a:hover,
 a:focus {
   color: #fd4c2a;
-  text-decoration: underline;
+  fill: #fd4c2a;
 }
 
 a:active {
@@ -161,7 +161,7 @@ a:active {
 }
 
 .container {
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 .row {
@@ -182,7 +182,7 @@ a:active {
 
 header {
   background-color: #fff;
-  padding: 10px 0 4px;
+  padding: 10px 0 10px;
   box-shadow: 1px 6px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -202,12 +202,16 @@ footer {
 
 #hero {
   background-color: #fff;
-  padding: 10px 0;
   display: inline-block;
   width: 100%;
 }
 
-#hero h1 {
+#hero,
+#center h1 {
+  text-align: center;
+}
+
+#center p {
   text-align: center;
 }
 
@@ -219,14 +223,8 @@ nav > ul {
 
 nav > ul > li > a {
   padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-
-nav > ul > li > a:hover,
-a:focus {
-  text-decoration: underline;
+  font-weight: 400;
+  color: #00003b;
 }
 
 nav > ul > li > a:active {
@@ -293,7 +291,7 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: -44px;
   }
 
   p,
