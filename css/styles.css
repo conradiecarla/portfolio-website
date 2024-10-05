@@ -141,6 +141,10 @@ a:active {
   color: #00003b;
 }
 
+.multi {
+  color: #00003b;
+}
+
 .logo:hover {
   font-weight: 400;
   text-decoration: none;
